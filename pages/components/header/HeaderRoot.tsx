@@ -5,7 +5,7 @@ interface HeaderRootProps {
   children: ReactNode;
 }
 
-export function HeaderRoot({ children }: HeaderRootProps) {
+export default function HeaderRoot({ children }: HeaderRootProps) {
   return (
     <Flex bg="tomato" w="100%" p={4}>
       {children}

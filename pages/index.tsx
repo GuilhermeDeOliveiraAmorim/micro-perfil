@@ -1,12 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import { HeaderRoot } from "./components/header/HeaderRoot";
-import { ContentRoot } from "./components/content/ContentRoot";
-import { FooterRoot } from "./components/footer/FooterRoot";
 import HeaderButton from "./components/header/HeaderButton";
 import { Perfil } from "./components/perfil";
 import { perfil } from "./repository/perfil.seed";
 import { SocialNetwork } from "./components/socialNetwork";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import ContentRoot from "./components/content/ContentRoot";
+import FooterRoot from "./components/footer/FooterRoot";
+import HeaderRoot from "./components/header/HeaderRoot";
 
 export default function Home() {
   return (

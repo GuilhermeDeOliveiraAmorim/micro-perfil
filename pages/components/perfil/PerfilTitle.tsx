@@ -4,6 +4,6 @@ interface PerfilTitleProps {
   title: string;
 }
 
-export function PerfilTitle({ title }: PerfilTitleProps) {
+export default function PerfilTitle({ title }: PerfilTitleProps) {
   return <Text>{title}</Text>;
 }
