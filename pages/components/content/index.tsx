@@ -1,4 +1,4 @@
-import { ContentRoot } from "./ContentRoot";
+import ContentRoot from "./ContentRoot";
 
 export const Content = {
   Root: ContentRoot,

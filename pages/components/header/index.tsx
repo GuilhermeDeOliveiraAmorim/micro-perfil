@@ -1,5 +1,5 @@
 import HeaderButton from "./HeaderButton";
-import { HeaderRoot } from "./HeaderRoot";
+import HeaderRoot from "./HeaderRoot";
 
 export const Header = {
   Root: HeaderRoot,
