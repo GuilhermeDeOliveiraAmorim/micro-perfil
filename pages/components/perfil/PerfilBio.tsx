@@ -17,7 +17,7 @@ export default function PerfilBio({ bioText }: PerfilBioProps) {
             {element.title}
           </Text>
           {element.paragraph.map((p) => (
-            <Text>{p}</Text>
+            <Text key={uuidv4()}>{p}</Text>
           ))}
         </Text>
       ))}
