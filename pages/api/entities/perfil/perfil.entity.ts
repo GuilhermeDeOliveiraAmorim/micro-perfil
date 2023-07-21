@@ -1,25 +1,31 @@
-import { randomUUID } from "crypto";
+import { v4 as uuidv4 } from "uuid";
 
 interface PerfilInterface {
   get id(): string;
   get image(): string;
   get name(): string;
   get jobTitle(): string;
-  get bio(): Paragraph;
+  get bio(): {
+    title: string;
+    paragraph: string[];
+  }[];
   get birthday(): string;
 }
 
-type Paragraph = {
+export type Paragraph = {
   title: string;
   paragraph: string[];
 }[];
 
-type PerfilProps = {
+export type PerfilProps = {
   id?: string;
   image: string;
   name: string;
   jobTitle: string;
-  bio: Paragraph;
+  bio: {
+    title: string;
+    paragraph: string[];
+  }[];
   birthday: string;
 };
 
@@ -28,11 +34,14 @@ export class Perfil implements PerfilInterface {
   private _image: string;
   private _name: string;
   private _jobTitle: string;
-  private _bio: Paragraph;
+  private _bio: {
+    title: string;
+    paragraph: string[];
+  }[];
   private _birthday: string;
 
   constructor(props: PerfilProps) {
-    this._id = randomUUID();
+    this._id = props.id || uuidv4();
     this._image = props.image;
     this._name = props.name;
     this._jobTitle = props.jobTitle;
@@ -56,7 +65,10 @@ export class Perfil implements PerfilInterface {
     return this._jobTitle;
   }
 
-  get bio(): Paragraph {
+  get bio(): {
+    title: string;
+    paragraph: string[];
+  }[] {
     return this._bio;
   }
 

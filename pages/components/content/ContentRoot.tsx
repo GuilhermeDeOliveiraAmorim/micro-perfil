@@ -1,5 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 interface ContentRootProps {
   children: ReactNode[];
@@ -25,7 +26,7 @@ export function ContentRoot({ children, gridArrangement }: ContentRootProps) {
       gap={4}
     >
       {children.map((node) => (
-        <GridItem bg="tomato">{node}</GridItem>
+        <GridItem key={uuidv4()}>{node}</GridItem>
       ))}
     </Grid>
   );

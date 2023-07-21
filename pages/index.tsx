@@ -3,6 +3,10 @@ import { HeaderRoot } from "./components/header/HeaderRoot";
 import { ContentRoot } from "./components/content/ContentRoot";
 import { FooterRoot } from "./components/footer/FooterRoot";
 import HeaderButton from "./components/header/HeaderButton";
+import { Perfil } from "./components/perfil";
+import { perfil } from "./repository/perfil.seed";
+import { SocialNetwork } from "./components/socialNetwork";
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -28,7 +32,16 @@ export default function Home() {
           },
         }}
       >
-        <div>A</div>
+        <Perfil.Root>
+          <Perfil.Image src={perfil.image} altText={perfil.name} />
+          <Perfil.Title title={perfil.jobTitle} />
+          <Perfil.SocialNetworks>
+            <SocialNetwork icon={AiFillLinkedin} link="" />
+            <SocialNetwork icon={AiFillGithub} link="" />
+            <SocialNetwork icon={AiFillInstagram} link="" />
+          </Perfil.SocialNetworks>
+          <Perfil.Bio bioText={perfil.bio} />
+        </Perfil.Root>
         <div>B</div>
         <div>C</div>
       </ContentRoot>
