@@ -6,10 +6,12 @@ interface SocialNetworkProps {
   link: string;
 }
 
-export function SocialNetwork({ icon, link }: SocialNetworkProps) {
+const SocialNetwork = ({ icon, link }: SocialNetworkProps) => {
   return (
     <Link href={link}>
       <Icon as={icon} />
     </Link>
   );
-}
+};
+
+export default SocialNetwork;

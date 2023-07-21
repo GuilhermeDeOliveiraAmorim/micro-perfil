@@ -4,6 +4,6 @@ interface PerfilRootProps {
   children: ReactNode;
 }
 
-export default function PerfilRoot({ children }: PerfilRootProps) {
+export const PerfilRoot = ({ children }: PerfilRootProps) => {
   return <div>{children}</div>;
-}
+};

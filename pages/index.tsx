@@ -1,12 +1,11 @@
-import { Box } from "@chakra-ui/react";
-import HeaderButton from "./components/header/HeaderButton";
-import { Perfil } from "./components/perfil";
-import { perfil } from "./repository/perfil.seed";
-import { SocialNetwork } from "./components/socialNetwork";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import ContentRoot from "./components/content/ContentRoot";
-import FooterRoot from "./components/footer/FooterRoot";
-import HeaderRoot from "./components/header/HeaderRoot";
+import { Box } from "@chakra-ui/react";
+import Header from "../components/header";
+import Content from "../components/content";
+import Perfil from "../components/perfil";
+import SocialNetwork from "../components/socialNetwork";
+import Footer from "../components/footer";
+import { perfil } from "../repository/perfil.seed";
 
 export default function Home() {
   return (
@@ -16,11 +15,11 @@ export default function Home() {
       height={"100vh"}
       justifyContent={"space-between"}
     >
-      <HeaderRoot>
-        <HeaderButton />
-      </HeaderRoot>
+      <Header.Root>
+        <Header.Button />
+      </Header.Root>
 
-      <ContentRoot
+      <Content.Root
         gridArrangement={{
           templateColumns: {
             quantity: 3,
@@ -44,11 +43,11 @@ export default function Home() {
         </Perfil.Root>
         <div>B</div>
         <div>C</div>
-      </ContentRoot>
+      </Content.Root>
 
-      <FooterRoot>
+      <Footer.Root>
         <div>Footer</div>
-      </FooterRoot>
+      </Footer.Root>
     </Box>
   );
 }

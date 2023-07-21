@@ -39,6 +39,11 @@ export class Perfil implements PerfilInterface {
     paragraph: string[];
   }[];
   private _birthday: string;
+  static Root: any;
+  static Image: any;
+  static Title: any;
+  static SocialNetworks: any;
+  static Bio: any;
 
   constructor(props: PerfilProps) {
     this._id = props.id || uuidv4();

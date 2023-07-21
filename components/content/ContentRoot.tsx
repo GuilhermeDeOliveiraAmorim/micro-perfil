@@ -16,10 +16,10 @@ interface ContentRootProps {
   };
 }
 
-export default function ContentRoot({
+export const ContentRoot = ({
   children,
   gridArrangement,
-}: ContentRootProps) {
+}: ContentRootProps) => {
   return (
     <Grid
       height={"100%"}
@@ -33,4 +33,4 @@ export default function ContentRoot({
       ))}
     </Grid>
   );
-}
+};

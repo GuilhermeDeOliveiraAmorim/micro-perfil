@@ -1,4 +1,4 @@
-import { Perfil } from "../api/entities/perfil/perfil.entity";
+import { Perfil } from "../pages/api/entities/perfil/perfil.entity";
 
 const paragraphs: {
   title: string;

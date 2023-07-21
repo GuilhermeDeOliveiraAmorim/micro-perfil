@@ -8,7 +8,7 @@ interface PerfilBioProps {
   }[];
 }
 
-export default function PerfilBio({ bioText }: PerfilBioProps) {
+export const PerfilBio = ({ bioText }: PerfilBioProps) => {
   return (
     <>
       {bioText.map((element) => (
@@ -20,4 +20,4 @@ export default function PerfilBio({ bioText }: PerfilBioProps) {
       ))}
     </>
   );
-}
+};

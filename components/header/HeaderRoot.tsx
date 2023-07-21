@@ -5,10 +5,10 @@ interface HeaderRootProps {
   children: ReactNode;
 }
 
-export default function HeaderRoot({ children }: HeaderRootProps) {
+export const HeaderRoot = ({ children }: HeaderRootProps) => {
   return (
     <Flex bg="tomato" w="100%" p={4}>
       {children}
     </Flex>
   );
-}
+};

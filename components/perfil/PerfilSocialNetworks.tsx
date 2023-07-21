@@ -5,8 +5,8 @@ interface PerfilSocialNetworksProps {
   children: ReactNode;
 }
 
-export default function PerfilSocialNetworks({
+export const PerfilSocialNetworks = ({
   children,
-}: PerfilSocialNetworksProps) {
+}: PerfilSocialNetworksProps) => {
   return <Flex>{children}</Flex>;
-}
+};
