@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import { v4 as uuidv4 } from "uuid";
 
 interface PerfilBioProps {
@@ -10,14 +10,10 @@ interface PerfilBioProps {
 
 export const PerfilBio = ({ bioText }: PerfilBioProps) => {
   return (
-    <>
+    <Stack spacing={2}>
       {bioText.map((element) => (
-        <Text key={uuidv4()} mb={4}>
-          <Text key={uuidv4()} as="b" mr={2}>
-            {element.title}
-          </Text>
-        </Text>
+        <Text>{element.title}</Text>
       ))}
-    </>
+    </Stack>
   );
 };

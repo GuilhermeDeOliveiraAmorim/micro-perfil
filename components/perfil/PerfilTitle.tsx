@@ -5,5 +5,7 @@ interface PerfilTitleProps {
 }
 
 export const PerfilTitle = ({ title }: PerfilTitleProps) => {
-  return <Text>{title}</Text>;
+  return (
+    <Text fontSize={{ base: "10px", md: "15px", lg: "20px" }}>{title}</Text>
+  );
 };

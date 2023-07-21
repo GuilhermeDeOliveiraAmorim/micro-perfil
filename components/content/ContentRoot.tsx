@@ -23,9 +23,9 @@ export const ContentRoot = ({
   return (
     <Grid
       height={"100%"}
-      p={4}
       templateRows={`repeat(${gridArrangement.templateRows.quantity}, ${gridArrangement.templateRows.fraction}fr)`}
       templateColumns={`repeat(${gridArrangement.templateColumns.quantity}, ${gridArrangement.templateColumns.quantity}fr)`}
+      p={4}
       gap={4}
     >
       {children.map((node) => (

@@ -1,5 +1,5 @@
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Header from "../components/header";
 import Content from "../components/content";
 import Perfil from "../components/perfil";
@@ -32,13 +32,16 @@ export default function Home() {
         }}
       >
         <Perfil.Root>
-          <Perfil.Image src={perfil.image} altText={perfil.name} />
-          <Perfil.Title title={perfil.jobTitle} />
-          <Perfil.SocialNetworks>
-            <SocialNetwork icon={AiFillLinkedin} link="" />
-            <SocialNetwork icon={AiFillGithub} link="" />
-            <SocialNetwork icon={AiFillInstagram} link="" />
-          </Perfil.SocialNetworks>
+          <Flex flexDirection={"column"} alignItems={"center"}>
+            <Perfil.Image src={perfil.image} altText={perfil.name} />
+            <Perfil.Title title={perfil.jobTitle} />
+            <Perfil.SocialNetworks>
+              <SocialNetwork icon={AiFillLinkedin} link="" />
+              <SocialNetwork icon={AiFillGithub} link="" />
+              <SocialNetwork icon={AiFillInstagram} link="" />
+            </Perfil.SocialNetworks>
+          </Flex>
+
           <Perfil.Bio bioText={perfil.bio} />
         </Perfil.Root>
         <div>B</div>

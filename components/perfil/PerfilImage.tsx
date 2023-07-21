@@ -6,5 +6,7 @@ interface PerfilImageProps {
 }
 
 export const PerfilImage = ({ src, altText }: PerfilImageProps) => {
-  return <Image borderRadius="full" boxSize="150px" src={src} alt={altText} />;
+  return (
+    <Image borderRadius="full" boxSize={"100px"} src={src} alt={altText} />
+  );
 };
