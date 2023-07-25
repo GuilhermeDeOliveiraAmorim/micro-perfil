@@ -12,7 +12,7 @@ export const PerfilBio = ({ bioText }: PerfilBioProps) => {
   return (
     <Stack spacing={2}>
       {bioText.map((element) => (
-        <Text>{element.title}</Text>
+        <Text key={uuidv4()}>{element.title}</Text>
       ))}
     </Stack>
   );
