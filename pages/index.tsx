@@ -1,56 +1,28 @@
-import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { Box, Flex } from "@chakra-ui/react";
-import Header from "../components/header";
-import Content from "../components/content";
-import Perfil from "../components/perfil";
-import SocialNetwork from "../components/socialNetwork";
-import Footer from "../components/footer";
-import { perfil } from "../repository/perfil.seed";
+import { Box, Button, Flex, Icon, useColorMode } from "@chakra-ui/react";
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      height={"100vh"}
-      justifyContent={"space-between"}
-    >
-      <Header.Root>
-        <Header.Button />
-      </Header.Root>
+    <Flex h={"100vh"} justifyContent={"space-between"} flexDirection={"column"}>
+      <Flex p={"4"} h={"10vh"} bg={"gray.200"} justifyContent={"space-between"} alignItems={"center"}>
+        <Box>Logo</Box>
+        <Flex gap={"4"} justifyContent={"space-between"} alignItems={"center"}>
+          <Icon boxSize={[5, 6, 7, 8]} as={AiFillGithub} />
+          <Icon boxSize={[5, 6, 7, 8]} as={AiFillLinkedin} />
+        </Flex>
+        <Box>
+          <Button onClick={toggleColorMode} rounded={"full"} p={"0"} colorScheme='blue'>
+            {colorMode === "light" ? <Icon as={BsFillLightbulbFill} /> : <Icon as={BsFillLightbulbOffFill} />}
+          </Button>
+        </Box>
+      </Flex>
+      <Flex pl={[4, 8, 16, 32]} pr={"40"} h={"80vh"} bg={"gray.300"}>
 
-      <Content.Root
-        gridArrangement={{
-          templateColumns: {
-            quantity: 3,
-            fraction: 1,
-          },
-          templateRows: {
-            quantity: 1,
-            fraction: 1,
-          },
-        }}
-      >
-        <Perfil.Root>
-          <Flex flexDirection={"column"} alignItems={"center"}>
-            <Perfil.Image src={perfil.image} altText={perfil.name} />
-            <Perfil.Title title={perfil.jobTitle} />
-            <Perfil.SocialNetworks>
-              <SocialNetwork icon={AiFillLinkedin} link="" />
-              <SocialNetwork icon={AiFillGithub} link="" />
-              <SocialNetwork icon={AiFillInstagram} link="" />
-            </Perfil.SocialNetworks>
-          </Flex>
-
-          <Perfil.Bio bioText={perfil.bio} />
-        </Perfil.Root>
-        <div>B</div>
-        <div>C</div>
-      </Content.Root>
-
-      <Footer.Root>
-        <div>Footer</div>
-      </Footer.Root>
-    </Box>
+      </Flex>
+      <Flex h={"10vh"} bg={"gray.500"}>Footer</Flex>
+    </Flex>
   );
 }

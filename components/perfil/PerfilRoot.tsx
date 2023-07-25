@@ -1,3 +1,4 @@
+import { Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface PerfilRootProps {
@@ -5,5 +6,5 @@ interface PerfilRootProps {
 }
 
 export const PerfilRoot = ({ children }: PerfilRootProps) => {
-  return <div>{children}</div>;
+  return <Flex>{children}</Flex>;
 };
